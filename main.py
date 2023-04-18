@@ -1,29 +1,21 @@
-from funkcje import zaladuj_zadania
-from funkcje import pokaz_zadania
-from funkcje import dodaj_zadanie
-from funkcje import usun_zadanie
-from funkcje import zapisz_zadania
+import funkcje
 
 wybor_zadania = -1
 
-zadania = []
-terminy = []
-lista_zadan = zadania + terminy
-
-zaladuj_zadania()
+funkcje.zaladuj_zadania()
 
 while wybor_zadania != 5:
     if wybor_zadania == 1:
-        pokaz_zadania()
+        funkcje.pokaz_zadania()
 
     if wybor_zadania == 2:
-        dodaj_zadanie()
+        funkcje.dodaj_zadanie()
 
     if wybor_zadania == 3:
-        usun_zadanie()
+        funkcje.usun_zadanie()
 
     if wybor_zadania == 4:
-        zapisz_zadania()
+        funkcje.zapisz_zadania()
     
     print("")
     print("1. Pokaż zadania")

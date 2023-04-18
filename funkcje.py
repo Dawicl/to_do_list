@@ -41,8 +41,11 @@ def zapisz_zadania():
     plik.close
 
 def zaladuj_zadania():
-    plik = open("lista_zadan.txt")
-    for linia in plik.readlines():
-        lista_zadan.append(linia.strip())
+    try:
+        plik = open("lista_zadan.txt")
+        for linia in plik.readlines():
+            lista_zadan.append(linia.strip())
 
-    plik.close
+        plik.close
+    except FileNotFoundError:
+        return
